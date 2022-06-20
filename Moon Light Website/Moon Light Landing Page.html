@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Moon Light</title>
+</head>
+<body>
+	<header>
+		<a href="#" class="logo">logo</a>
+		<ul>
+		<li><a href="" class="active">Home</a></li>
+		<li><a href="">Privacy</a></li>
+		<li><a href="#">About</a></li>
+		<li><a href="">Contact</a></li>
+	</ul>
+	</header>
+	<section>
+		<img src="images\stars.png" id="stars">
+		<img src="images\moon.png" id="moon">
+		<img src="images\mountains_behind.png" id="mountains_behind">
+		<h2 id="text">Moon Light</h2>
+		<a href="#sec" id="btn">Explore</a>
+		<img src="images\mountains_front.png" id="mountains_front">
+	</section>
+	<div class="sec" id="sec">
+		<h2>WELCOME TO MOON LIGHT</h2>
+		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. -Bhat Aasim.
+		<br><br>
+		It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum has been the industry's. The generated Lorem Ipsum is therefore always Making this the first true generator It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+		<br><br>
+		The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.
+		<br><br>
+		The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+		<br><br>
+		Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. -Bhat Aasim.
+		</p>
+	</div>
+
+	<script type="text/javascript">
+		let stars = document.getElementById('stars');
+		let moon = document.getElementById('moon');
+		let mountain_behind = document.getElementById('mountains_behind');
+		let text = document.getElementById('text');
+		let btn = document.getElementById('btn');
+		let mountain_front = document.getElementById('mountain_front');
+
+		let header = document.querySelector('header');
+
+
+		window.addEventListener('scroll',function() {
+			let value = window.scrollY;
+			stars.style.left = value * 0.25 + 'px';
+			moon.style.top = value * 1.05 + 'px';
+			mountains_behind.style.top = value * 0.5 + 'px';
+			mountains_front.style.top = value * 0 + 'px';
+			text.style.marginRight = value * 4 + 'px';
+			text.style.marginTop = value * 1.5 + 'px';
+			btn.style.marginTop = value * 1.5 + 'px';
+			header.style.top = value * 0.5 + 'px';
+		})
+	</script>
+</body>
+</html>
